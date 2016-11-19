@@ -1,0 +1,36 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# test
+
+This API is used by the paragraf app.
+
+## Stories [/stories/feed{?limit}]
+
++ Parameters
+    + limit (number, optional) - max number of results
+
+### Get stories feed [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "title": "Harry Potten",
+                "upvote": 32,
+                "contributors": [
+                    {
+                        "name": "Adri",
+                        "id": 6872364
+                    }
+                ],
+                "paragraphs": [
+                    {
+                        "author_name": "Adri",
+                        "author_id": 7283746
+                        "parution": 78326482736,
+                        "text": "Paragraph content"
+                    }
+                ]
+            }
+        ]
