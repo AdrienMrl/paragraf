@@ -56,7 +56,7 @@ class StoryDetailTableViewController: UITableViewController {
 
     
     func genHeader(for indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath) as! StoryDetailHeaderTableViewCell
+        return tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath)
     }
     
     func genParagraph(for indexPath: IndexPath) -> UITableViewCell {

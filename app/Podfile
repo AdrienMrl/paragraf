@@ -9,4 +9,9 @@ target 'paragraf' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
 
+  source 'https://github.com/CocoaPods/Specs.git'
+  platform :ios, '8.0'
+
+  pod 'Material', '~> 2.0'
+
 end

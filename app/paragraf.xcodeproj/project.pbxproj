@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93086E091DDE15EA009DDFB8 /* FeedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93086E081DDE15EA009DDFB8 /* FeedCardView.swift */; };
 		934A26A51DDB92E100B4F707 /* StoryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934A26A41DDB92E100B4F707 /* StoryDetailTableViewController.swift */; };
 		935057FC1DDB26CC0006ADF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935057FB1DDB26CC0006ADF0 /* AppDelegate.swift */; };
 		935057FE1DDB26CC0006ADF0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935057FD1DDB26CC0006ADF0 /* FirstViewController.swift */; };
@@ -14,14 +15,17 @@
 		935058031DDB26CC0006ADF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935058011DDB26CC0006ADF0 /* Main.storyboard */; };
 		935058051DDB26CC0006ADF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935058041DDB26CC0006ADF0 /* Assets.xcassets */; };
 		935058081DDB26CC0006ADF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935058061DDB26CC0006ADF0 /* LaunchScreen.storyboard */; };
+		93A4E04F1DDE1A43001CA4E6 /* StoryDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4E04E1DDE1A43001CA4E6 /* StoryDetailHeaderTableViewCell.swift */; };
+		93B068BF1DDBB7F200945657 /* ParagraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B068BE1DDBB7F200945657 /* ParagraphTableViewCell.swift */; };
+		93E3EA811DDEEC6B00001993 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3EA801DDEEC6B00001993 /* FeedTableViewController.swift */; };
+		A067401C1DDBA9F600053FCE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067401B1DDBA9F600053FCE /* AuthViewController.swift */; };
+		A93CF6E6A7252737EF0FEF6F /* Pods_paragraf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA33DBED160206C705222D3 /* Pods_paragraf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		93B068BF1DDBB7F200945657 /* ParagraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B068BE1DDBB7F200945657 /* ParagraphTableViewCell.swift */; };
-		A067401C1DDBA9F600053FCE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067401B1DDBA9F600053FCE /* AuthViewController.swift */; };
-		A93CF6E6A7252737EF0FEF6F /* Pods_paragraf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA33DBED160206C705222D3 /* Pods_paragraf.framework */; };
 		72158C2F18019EFCE405251A /* Pods-paragraf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paragraf.release.xcconfig"; path = "Pods/Target Support Files/Pods-paragraf/Pods-paragraf.release.xcconfig"; sourceTree = "<group>"; };
 		91085D07BDE49A3E1157341C /* Pods-paragraf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paragraf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paragraf/Pods-paragraf.debug.xcconfig"; sourceTree = "<group>"; };
+		93086E081DDE15EA009DDFB8 /* FeedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCardView.swift; sourceTree = "<group>"; };
 		934A26A41DDB92E100B4F707 /* StoryDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDetailTableViewController.swift; sourceTree = "<group>"; };
 		935057F81DDB26CC0006ADF0 /* paragraf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paragraf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935057FB1DDB26CC0006ADF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +35,9 @@
 		935058041DDB26CC0006ADF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935058071DDB26CC0006ADF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		935058091DDB26CC0006ADF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4E04E1DDE1A43001CA4E6 /* StoryDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		93B068BE1DDBB7F200945657 /* ParagraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphTableViewCell.swift; sourceTree = "<group>"; };
+		93E3EA801DDEEC6B00001993 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		9AA33DBED160206C705222D3 /* Pods_paragraf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paragraf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067401B1DDBA9F600053FCE /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A0BF82241DDBD2A700C84137 /* paragraf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = paragraf.entitlements; sourceTree = "<group>"; };
@@ -70,12 +76,15 @@
 		935057FA1DDB26CC0006ADF0 /* paragraf */ = {
 			isa = PBXGroup;
 			children = (
+				93A4E04E1DDE1A43001CA4E6 /* StoryDetailHeaderTableViewCell.swift */,
 				A0BF82241DDBD2A700C84137 /* paragraf.entitlements */,
 				A067401B1DDBA9F600053FCE /* AuthViewController.swift */,
 				935057FB1DDB26CC0006ADF0 /* AppDelegate.swift */,
 				935057FD1DDB26CC0006ADF0 /* FirstViewController.swift */,
 				935057FF1DDB26CC0006ADF0 /* SecondViewController.swift */,
 				935058011DDB26CC0006ADF0 /* Main.storyboard */,
+				93E3EA801DDEEC6B00001993 /* FeedTableViewController.swift */,
+				93086E081DDE15EA009DDFB8 /* FeedCardView.swift */,
 				934A26A41DDB92E100B4F707 /* StoryDetailTableViewController.swift */,
 				93B068BE1DDBB7F200945657 /* ParagraphTableViewCell.swift */,
 				935058041DDB26CC0006ADF0 /* Assets.xcassets */,
@@ -137,7 +146,7 @@
 				TargetAttributes = {
 					935057F71DDB26CC0006ADF0 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KA74PPR2DQ;
+						DevelopmentTeam = 8XCF8YPAMS;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -235,8 +244,11 @@
 				935058001DDB26CC0006ADF0 /* SecondViewController.swift in Sources */,
 				93B068BF1DDBB7F200945657 /* ParagraphTableViewCell.swift in Sources */,
 				935057FC1DDB26CC0006ADF0 /* AppDelegate.swift in Sources */,
+				93E3EA811DDEEC6B00001993 /* FeedTableViewController.swift in Sources */,
 				934A26A51DDB92E100B4F707 /* StoryDetailTableViewController.swift in Sources */,
 				935057FE1DDB26CC0006ADF0 /* FirstViewController.swift in Sources */,
+				93086E091DDE15EA009DDFB8 /* FeedCardView.swift in Sources */,
+				93A4E04F1DDE1A43001CA4E6 /* StoryDetailHeaderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +376,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = paragraf/paragraf.entitlements;
-				DEVELOPMENT_TEAM = KA74PPR2DQ;
+				DEVELOPMENT_TEAM = 8XCF8YPAMS;
 				INFOPLIST_FILE = paragraf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mobi.iglu.paragraf;
@@ -380,7 +392,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = paragraf/paragraf.entitlements;
-				DEVELOPMENT_TEAM = KA74PPR2DQ;
+				DEVELOPMENT_TEAM = 8XCF8YPAMS;
 				INFOPLIST_FILE = paragraf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mobi.iglu.paragraf;

@@ -44,7 +44,7 @@ class ParagraphTableViewCell: UITableViewCell {
         setProfile()
         
         
-        var rec = authorProfileView.frame
+        let rec = authorProfileView.frame
 //        rec = rec.applying(CGAffineTransform(translationX: 0, y: -40))
         
         let imgRect = UIBezierPath(rect: rec)

@@ -11,18 +11,23 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.17.0):
     - FBSDKCoreKit
+  - Material (2.3.11):
+    - Material/Core (= 2.3.11)
+  - Material/Core (2.3.11)
 
 DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - Material (~> 2.0)
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: 30a21d2d7b92984b3d80497113433c00824c35e9
   FBSDKLoginKit: 42b7129ac0373ca99eaf4cbebf4d07bd42371f59
   FBSDKShareKit: 9b573d03fbee36cbaf42d5bb1f2bc019e0d72347
+  Material: 321e44334101504ca3a7bfe4ce2851eb78091f3c
 
-PODFILE CHECKSUM: ea2709aa42fee3f1c484d3f93e334eb307d251df
+PODFILE CHECKSUM: f898724136eb582e6272dbff764c570c3c38cebc
 
 COCOAPODS: 1.1.1
