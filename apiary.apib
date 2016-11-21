@@ -1,16 +1,66 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# test
+# Paragraf API
 
 This API is used by the paragraf app.
 
-## Stories [/stories/feed{?limit}]
+## Group User
+
+### GET /token{?access_token}
+
+Get an access token for future calls.
 
 + Parameters
-    + limit (number, optional) - max number of results
+    + access_token (string) - facebook access token
+    
++ Response 200 (application/json)
 
-### Get stories feed [GET]
+        {
+                "token": "f7fhi8987fjlk",
+                "expiration_time": 3600,
+                "user_id": 27634
+        }
+
+### GET /users/{id}{?access_token}
+
+Get a user profile
+
++ Parameter
+    + access_token (string) - access token
+    + id (int) - user id
+
++ Response 200 (application/json)
+
+        {
+                "full_name": "Donald Trump",
+                "profile_pic": "https://profilepic.com/pic.jpg",
+                "bio": "bio content",
+                "stories": 3,
+                "reputation": 45
+        }
+  
+### POST /user/id
+
+Update a user profile
+
++ Parameter
+    + access_token (string) - access token
+    + bio (string) - bio content
+    + delete_profile (boolean) - true if a user want to delete its account
+
++ Response 200
+
+## Group Stories
+
+### GET /stories{?access_token,limit,filter}
+
+Get a collection of stories
+
++ Parameters
+    + access_token (string) - access token
+    + limit (number, optional) - max number of results
+    + filter (string, optional) - 'feed' for the feed, 'favourites' for the favourites stories, and 'contributing' for the opened stories a user is contributing to.
 
 + Response 200 (application/json)
 
@@ -34,3 +84,52 @@ This API is used by the paragraf app.
                 ]
             }
         ]
+        
+### PUT /stories
+
+Create a new story
+
++ Parameters
+    + access_token (string) - access token
+    + title (string) - Title of the story
+    + background (number) - Id of the chosen story background picture
+    + contributors (string) - people authorized to write in the story ex: '342, 2345, 3258'
+    
++ Response 200
+
+### POST /stories/{id}
+
+Add a paragraph to a story
+
++ Parameters
+    + access_token (string) - access token
+    + text (string) - paragraph content
+  
++ Response 200
+  
+### POST /stories/{id}/close
+    
+Close a story
+
++ Parameters
+    + access_token (string) - access token
+
++ Response 200
+
+### POST /stories/{id}/favourite
+
+Add a story to a user favourites
+
++ Parameters
+    + access_token (string) - access token
+    
++ Response 200
+
+### POST /stories/{id}/upvote
+
+Upvote a story
+
++ Parameters
+    + access_token (string) - access token
+
++ Response 200
