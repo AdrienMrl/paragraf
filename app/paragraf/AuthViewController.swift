@@ -1,6 +1,6 @@
 //
 //  AuthViewController.swift
-//  
+//
 //
 //  Created by gwendal lasson on 15/11/16.
 //
@@ -10,19 +10,25 @@ import UIKit
 import FBSDKLoginKit
 
 class AuthViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let readPermissions = ["email", "public_profile"]
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            let readPermissions = ["email", "public_profile"]
-            
-            let loginButton = FBSDKLoginButton()
-            loginButton.readPermissions = readPermissions
-            
-            view.addSubview(loginButton)
-            loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 50)
-            
-            loginButton.delegate = self
-        }
+        let loginButton = FBSDKLoginButton()
+        loginButton.readPermissions = readPermissions
+        
+        view.addSubview(loginButton)
+        
+        let verticalConstraint = NSLayoutConstraint(item: loginButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -30)
+        let rightConstraint = NSLayoutConstraint(item: loginButton, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1.0, constant: -30)
+        let leftConstraint = NSLayoutConstraint(item: loginButton, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 30)
+        let heightContraint = NSLayoutConstraint(item: loginButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 50)
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([verticalConstraint, leftConstraint, rightConstraint, heightContraint])
+        
+        loginButton.delegate = self
+    }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Did log out of facebook")
@@ -33,17 +39,7 @@ class AuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             print(error)
             return
         }
-        print("")
-        print(FBSDKAccessToken.current().tokenString)
-        print("")
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
-            
-            if err != nil {
-                print("Failed to start graph request:", err ?? "Unknown error")
-                return
-            }
-            print(result ?? "Nothing")
-        }
+        print((FBSDKAccessToken.current()?.tokenString) ?? "No token")
     }
-
+    
 }

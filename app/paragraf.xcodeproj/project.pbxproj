@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					935057F71DDB26CC0006ADF0 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 8XCF8YPAMS;
+						DevelopmentTeam = KA74PPR2DQ;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -376,7 +376,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = paragraf/paragraf.entitlements;
-				DEVELOPMENT_TEAM = 8XCF8YPAMS;
+				DEVELOPMENT_TEAM = KA74PPR2DQ;
 				INFOPLIST_FILE = paragraf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mobi.iglu.paragraf;
@@ -392,7 +392,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = paragraf/paragraf.entitlements;
-				DEVELOPMENT_TEAM = 8XCF8YPAMS;
+				DEVELOPMENT_TEAM = KA74PPR2DQ;
 				INFOPLIST_FILE = paragraf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mobi.iglu.paragraf;
