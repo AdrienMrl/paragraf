@@ -2,6 +2,7 @@ const bluebird = require('bluebird')
 const assert = require('assert')
 const request = bluebird.promisify(require('request'), {multiArgs: true})
 const route = require('./route.js')
+const secret = require('./secret.js')
 const serv_addr = "localhost"
 const serv_port = 3000
 
@@ -47,8 +48,14 @@ describe('API', () => {
   describe('server', () =>
     it('should HTTP listen', () => route.startListening(3000)))
   describe('GET', () => {
+    it('should return a token', () =>
+      call(`/token?access_token=${secret.TOKEN_TEST}`)
+        .spread((response, body) => assert(typeof(JSON.parse(body).token) === 'string')))
+
+/*
     it('should return a stories feed', () =>
-      call('/stories/feed?limit=10')
-        .spread((response, body) => assert(objectIsOfSameType(JSON.parse(body), basicStory))))
+        .spread((response, body) => console.log(body)))
+//        .spread((response, body) => assert(objectIsOfSameType(JSON.parse(body), basicStory))))
+*/
   })
 })
