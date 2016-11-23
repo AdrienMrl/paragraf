@@ -1,7 +1,6 @@
 const express = require('express')
 const bluebird = require('bluebird')
 const app = bluebird.promisifyAll(express())
-const secret = require('./secret.js')
 const auth = require('./auth.js')
 const db = require('./db.js')
 
@@ -28,7 +27,7 @@ app.get('/token', (req, res) => {
     .catch((err) => res.status(403).send(`{"error": "${err}"`))
 })
 
-const startListening = (port) => app.listenAsync(3000)
+const startListening = port => app.listenAsync(port)
 
 module.exports = {
   startListening

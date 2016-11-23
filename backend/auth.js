@@ -1,4 +1,3 @@
-const secret = require('./secret.js')
 const bluebird = require('bluebird')
 const request = bluebird.promisify(require('request'), {multiArgs: true})
 
