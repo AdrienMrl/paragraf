@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "forever index.js",
-    "preinstall": "mysql -u root < sql/init.sql",
+    "preinstall": "mysql -u root < sql/init.sql || true",
     "test": "istanbul cover _mocha"
   },
   "author": "Adrien Morel",

@@ -11,20 +11,20 @@ app.get('/token', (req, res) => {
   const sendToken = (user) =>
     res.send(JSON.stringify({
       token: auth.getToken(user.dataValues.id),
-      expiration_time: 3600,
       user_id: user.dataValues.id
     }))
 
+
   auth.authenticateUser(token)
-    .then(({email, name, id}) =>
-      db.findUser(id)
-        .then(user => sendToken(user))
-        .catch((err) => {
-          return db.registerUser(id, email, name)
-            .then(user => sendToken(user))
-            .catch(err => console.error(err))
-          }))
-    .catch(err => res.status(403).send(`{"error": "${err}"`))
+  .then(({email, name, id}) =>
+  db.findUser(id)
+  .then(user => sendToken(user))
+  .catch((err) => {
+    return db.registerUser(id, email, name)
+    .then(user => sendToken(user))
+    .catch(err => console.error(err))
+  }))
+  .catch(err => res.status(403).send(`{"error": "${err}"`))
 })
 
 const startListening = port => app.listenAsync(port)

@@ -31,24 +31,25 @@ const Story = sequelize.define('story', {
   }
 })
 
-const Contributor = sequelize.define('contributor')
-
 const Paragraph = sequelize.define('paragraph', {
   content: {
     type: Sequelize.STRING
   }
 })
 
+const Contributors = sequelize.define('contributors')
+
 Story.hasMany(Paragraph)
-Story.hasMany(Contributor)
-Contributor.belongsTo(User)
+User.belongsToMany(Story, {through: {model: Contributors}})
 Paragraph.belongsTo(User, {as: 'author'})
 
-/*
-const force = undefined // {force: true}
-Promise.all([Paragraph.sync(force), Contributor.sync(force), User.sync(force), Story.sync(force)])
+const force = undefined //{force: true}
+
+User.sync(force)
+  .then(() => Story.sync(force))
+  .then(() => Paragraph.sync(force))
+  .then(() => Contributors.sync(force))
   .catch((err) => console.log(err))
-  */
 
 module.exports = {
   User,
