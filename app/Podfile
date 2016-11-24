@@ -9,6 +9,7 @@ target 'paragraf' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   source 'https://github.com/CocoaPods/Specs.git'
   platform :ios, '8.0'
