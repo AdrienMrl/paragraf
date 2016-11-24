@@ -25,19 +25,20 @@ class API {
         
     }
     
-    func retrieveToken() -> Bool {
-        let parameters: Parameters = ["token" : FBSDKAccessToken.current().tokenString]
-        Alamofire.request(serverURL,method: .post, parameters: parameters).validate().responseJSON { response in
+    func retrieveToken(logToFacebook: @escaping () -> ()) {
+        let facebookToken = FBSDKAccessToken.current().tokenString!
+        let parameters: Parameters = ["access_token" : facebookToken]
+        Alamofire.request(serverURL + ":" + String(port) + "/token", method: .get, parameters: parameters).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 print("Token granted")
                 let json = JSON(value)
-                print("JSON: \(json)")
+                self.API_token = json["token"].string
             case .failure(let error):
                 print(error)
+                logToFacebook()
             }
         }
 
-        return API_token != nil
     }
 }

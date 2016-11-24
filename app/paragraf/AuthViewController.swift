@@ -41,6 +41,7 @@ class AuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             return
         }
         print((FBSDKAccessToken.current()?.tokenString) ?? "No token")
+        performSegue(withIdentifier: "unwindToTBC", sender: nil)
     }
     
 }

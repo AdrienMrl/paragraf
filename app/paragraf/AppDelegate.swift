@@ -14,14 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        if (FBSDKAccessToken.current()) != nil {
+        if (FBSDKAccessToken.current()) == nil {
+            
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let tabBar = storyboard.instantiateViewController(withIdentifier: "tabBar")
-            self.window?.rootViewController = tabBar
+            let loginScreen = storyboard.instantiateViewController(withIdentifier: "authView")
+            self.window?.rootViewController = loginScreen
         }
         
         return true

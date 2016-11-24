@@ -20,6 +20,7 @@
 		93E3EA811DDEEC6B00001993 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3EA801DDEEC6B00001993 /* FeedTableViewController.swift */; };
 		A067401C1DDBA9F600053FCE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067401B1DDBA9F600053FCE /* AuthViewController.swift */; };
 		A0CD0FFB1DE6EC99008DD3D4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD0FFA1DE6EC99008DD3D4 /* API.swift */; };
+		A0E0E9DB1DE737F7002D0D73 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E0E9DA1DE737F7002D0D73 /* TabBarController.swift */; };
 		A93CF6E6A7252737EF0FEF6F /* Pods_paragraf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA33DBED160206C705222D3 /* Pods_paragraf.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		A067401B1DDBA9F600053FCE /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A0BF82241DDBD2A700C84137 /* paragraf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = paragraf.entitlements; sourceTree = "<group>"; };
 		A0CD0FFA1DE6EC99008DD3D4 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A0E0E9DA1DE737F7002D0D73 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				93A4E04E1DDE1A43001CA4E6 /* StoryDetailHeaderTableViewCell.swift */,
 				A0BF82241DDBD2A700C84137 /* paragraf.entitlements */,
 				A067401B1DDBA9F600053FCE /* AuthViewController.swift */,
+				A0E0E9DA1DE737F7002D0D73 /* TabBarController.swift */,
 				935057FB1DDB26CC0006ADF0 /* AppDelegate.swift */,
 				935057FD1DDB26CC0006ADF0 /* FirstViewController.swift */,
 				935057FF1DDB26CC0006ADF0 /* SecondViewController.swift */,
@@ -245,6 +248,7 @@
 			files = (
 				A067401C1DDBA9F600053FCE /* AuthViewController.swift in Sources */,
 				935058001DDB26CC0006ADF0 /* SecondViewController.swift in Sources */,
+				A0E0E9DB1DE737F7002D0D73 /* TabBarController.swift in Sources */,
 				A0CD0FFB1DE6EC99008DD3D4 /* API.swift in Sources */,
 				93B068BF1DDBB7F200945657 /* ParagraphTableViewCell.swift in Sources */,
 				935057FC1DDB26CC0006ADF0 /* AppDelegate.swift in Sources */,

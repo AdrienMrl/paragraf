@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vmk-bx-C2b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mnk-5i-BC1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -213,7 +213,7 @@
             <objects>
                 <navigationController id="cIc-vP-abJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="siu-pm-ZMe"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iPd-5H-OrW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iPd-5H-OrW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -238,7 +238,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dUM-W1-JyK" id="qQa-d4-ezb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTd-8s-vpt" customClass="FeedCardView" customModule="paragraf" customModuleProvider="target">
@@ -275,7 +275,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJm-j4-r9c" id="i5b-6S-pO7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -296,7 +296,7 @@
             <objects>
                 <navigationController id="62l-Ji-vhQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="9Uu-Zy-unt"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ow8-TI-Mbk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ow8-TI-Mbk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -311,7 +311,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="VRR-be-Pvv">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="mnk-5i-BC1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="mnk-5i-BC1" customClass="TabBarController" customModule="paragraf" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Fs2-N7-1hR">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -321,16 +321,17 @@
                     <connections>
                         <segue destination="cIc-vP-abJ" kind="relationship" relationship="viewControllers" id="QsH-Oo-Bj8"/>
                         <segue destination="62l-Ji-vhQ" kind="relationship" relationship="viewControllers" id="apS-Ic-QQK"/>
+                        <segue destination="Vmk-bx-C2b" kind="presentation" identifier="facebookLogin" animates="NO" id="nLz-Xf-1gi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rf5-b3-Z9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1474.4000000000001" y="262.21889055472263"/>
+            <point key="canvasLocation" x="-1833" y="66"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="maD-TS-od9">
             <objects>
-                <viewController id="Vmk-bx-C2b" customClass="AuthViewController" customModule="paragraf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authView" id="Vmk-bx-C2b" customClass="AuthViewController" customModule="paragraf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ujP-F2-h6S"/>
                         <viewControllerLayoutGuide type="bottom" id="cTV-Xx-XsV"/>
@@ -340,10 +341,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="ZPU-X6-XbQ" kind="unwind" identifier="unwindToTBC" unwindAction="unwindToTBCWithSegue:" id="m6L-qi-ELu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwU-ed-eOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZPU-X6-XbQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1081" y="-562"/>
+            <point key="canvasLocation" x="-706" y="-523"/>
         </scene>
     </scenes>
     <resources>
