@@ -24,7 +24,7 @@ app.get('/token', (req, res) => {
             .then(user => sendToken(user))
             .catch(err => console.error(err))
           }))
-    .catch((err) => res.status(403).send(`{"error": "${err}"`))
+    .catch(err => res.status(403).send(`{"error": "${err}"`))
 })
 
 const startListening = port => app.listenAsync(port)

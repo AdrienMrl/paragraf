@@ -44,9 +44,9 @@ const objectIsOfSameType = (objA, objB) => {
   return sameType
 }
 
+route.startListening(3000)
+
 describe('API', () => {
-  describe('server', () =>
-    it('should HTTP listen', () => route.startListening(3000)))
   describe('GET', () => {
     it('should return a token', () =>
       call(`/token?access_token=${secret.TOKEN_TEST}`)
