@@ -19,6 +19,7 @@
 		93B068BF1DDBB7F200945657 /* ParagraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B068BE1DDBB7F200945657 /* ParagraphTableViewCell.swift */; };
 		93E3EA811DDEEC6B00001993 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3EA801DDEEC6B00001993 /* FeedTableViewController.swift */; };
 		A067401C1DDBA9F600053FCE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067401B1DDBA9F600053FCE /* AuthViewController.swift */; };
+		A0CD0FFB1DE6EC99008DD3D4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD0FFA1DE6EC99008DD3D4 /* API.swift */; };
 		A93CF6E6A7252737EF0FEF6F /* Pods_paragraf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA33DBED160206C705222D3 /* Pods_paragraf.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		9AA33DBED160206C705222D3 /* Pods_paragraf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paragraf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067401B1DDBA9F600053FCE /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A0BF82241DDBD2A700C84137 /* paragraf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = paragraf.entitlements; sourceTree = "<group>"; };
+		A0CD0FFA1DE6EC99008DD3D4 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				935057FB1DDB26CC0006ADF0 /* AppDelegate.swift */,
 				935057FD1DDB26CC0006ADF0 /* FirstViewController.swift */,
 				935057FF1DDB26CC0006ADF0 /* SecondViewController.swift */,
+				A0CD0FFA1DE6EC99008DD3D4 /* API.swift */,
 				935058011DDB26CC0006ADF0 /* Main.storyboard */,
 				93E3EA801DDEEC6B00001993 /* FeedTableViewController.swift */,
 				93086E081DDE15EA009DDFB8 /* FeedCardView.swift */,
@@ -242,6 +245,7 @@
 			files = (
 				A067401C1DDBA9F600053FCE /* AuthViewController.swift in Sources */,
 				935058001DDB26CC0006ADF0 /* SecondViewController.swift in Sources */,
+				A0CD0FFB1DE6EC99008DD3D4 /* API.swift in Sources */,
 				93B068BF1DDBB7F200945657 /* ParagraphTableViewCell.swift in Sources */,
 				935057FC1DDB26CC0006ADF0 /* AppDelegate.swift in Sources */,
 				93E3EA811DDEEC6B00001993 /* FeedTableViewController.swift in Sources */,
@@ -373,7 +377,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91085D07BDE49A3E1157341C /* Pods-paragraf.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = paragraf/paragraf.entitlements;
 				DEVELOPMENT_TEAM = KA74PPR2DQ;
@@ -389,7 +393,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72158C2F18019EFCE405251A /* Pods-paragraf.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = paragraf/paragraf.entitlements;
 				DEVELOPMENT_TEAM = KA74PPR2DQ;

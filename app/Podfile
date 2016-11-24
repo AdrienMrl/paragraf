@@ -8,6 +8,7 @@ target 'paragraf' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'Alamofire'
 
   source 'https://github.com/CocoaPods/Specs.git'
   platform :ios, '8.0'

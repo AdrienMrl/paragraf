@@ -28,6 +28,7 @@ class AuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         NSLayoutConstraint.activate([verticalConstraint, leftConstraint, rightConstraint, heightContraint])
         
         loginButton.delegate = self
+        print((FBSDKAccessToken.current()?.tokenString) ?? "No token")
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
