@@ -3,29 +3,34 @@ const assert = require('assert')
 const request = bluebird.promisify(require('request'), {multiArgs: true})
 const route = require('./route.js')
 const secret = require('./secret.js')
-const serv_addr = "localhost"
-const serv_port = 3000
+const servAddr = 'localhost'
+const servPort = 3000
 
 const call = (endpoint) =>
-  request(`http://${serv_addr}:${serv_port}${endpoint}`)
+  request(`http://${servAddr}:${servPort}${endpoint}`)
+
+const authCall = (query) =>
+  call(`/token?access_token=${secret.TOKEN_TEST}`)
+    .spread((res, body) => JSON.parse(body).token)
+    .then(token => call(`${query}&access_token=${token}`))
 
 const basicStory = {
-    title: "Harry Potten",
-    upvote: 32,
-    contributors: [
-        {
-            name: "Adri",
-            id: 6872364
-        }
-    ],
-    paragraphs: [
-        {
-            author_name: "Adri",
-            author_id: 7283746,
-            parution: 78326482736,
-            text: "Paragraph content"
-        }
-    ]
+  title: 'Harry Potten',
+  upvote: 32,
+  contributors: [
+    {
+      name: 'Adri',
+      id: 6872364
+    }
+  ],
+  paragraphs: [
+    {
+      authorName: 'Adri',
+      authorId: 7283746,
+      parution: 78326482736,
+      text: 'Paragraph content'
+    }
+  ]
 }
 
 const objectIsOfSameType = (objA, objB) => {
@@ -50,12 +55,9 @@ describe('API', () => {
   describe('GET', () => {
     it('should return a token', () =>
       call(`/token?access_token=${secret.TOKEN_TEST}`)
-        .spread((response, body) => assert(typeof(JSON.parse(body).token) === 'string')))
+      .spread((response, body) => assert(typeof JSON.parse(body).token === 'string')))
 
-/*
-    it('should return a stories feed', () =>
-        .spread((response, body) => console.log(body)))
-//        .spread((response, body) => assert(objectIsOfSameType(JSON.parse(body), basicStory))))
-*/
+    it('should return a stories feed', () => authCall('/stories?filter=feed')
+      .spread((response, body) => assert(objectIsOfSameType(JSON.parse(body)[0], basicStory))))
   })
 })

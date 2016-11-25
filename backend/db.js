@@ -12,6 +12,8 @@ const findUser = (facebookId) => db.User.findOne({
   where: {facebookId}
 })
 
+const getFeed = () => db.Story.findAll()
+
 module.exports = {
   registerUser,
   findUser

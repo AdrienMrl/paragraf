@@ -20,7 +20,7 @@ const Story = sequelize.define('story', {
   title: {
     type: Sequelize.STRING
   },
-  upvotes: {
+  upvote: {
     type: Sequelize.INTEGER
   },
   background: {

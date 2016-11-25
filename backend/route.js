@@ -29,6 +29,11 @@ app.get('/token', (req, res) => {
 
 const startListening = port => app.listenAsync(port)
 
+app.get('/stories', (req, res) => {
+  auth.authenticateRequest(req, res)
+    .then(() => res.send(db.getFeed()))
+})
+
 module.exports = {
   startListening
 }
