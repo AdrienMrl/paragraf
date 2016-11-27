@@ -4,3 +4,6 @@
 [submodule "paragraf_android_client"]
 	path = paragraf_android_client
 	url = https://github.com/Bouxty/paragraf_android_client.git
+[submodule "paragraf_backend"]
+	path = paragraf_backend
+	url = git@github.com:Sevauk/paragraf_backend.git
