@@ -1,9 +1,9 @@
 [submodule "paragraf_ios_client"]
-	path = paragraf_ios_client
+	path = ios
 	url = https://github.com/lasson-g/paragraf_ios_client.git
 [submodule "paragraf_android_client"]
-	path = paragraf_android_client
+	path = android
 	url = https://github.com/Bouxty/paragraf_android_client.git
 [submodule "paragraf_backend"]
-	path = paragraf_backend
+	path = backend
 	url = https://github.com/Sevauk/paragraf_backend
